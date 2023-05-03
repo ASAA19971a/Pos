@@ -9,7 +9,6 @@
 @section('content-title', 'Perfil')
 
 @section('content')
-
     @livewire('administration::user-profile.user-profile')
 @endsection
 
@@ -20,7 +19,6 @@
         // Phone
         Inputmask({
             "mask": "0999999999",
-            // "placeholder": "(593) 999-9999",
         }).mask("#phone_number");
     </script>
 @endsection

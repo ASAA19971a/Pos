@@ -31,7 +31,7 @@
                     <div class="col-lg-8">
                         <!--begin::Image input-->
                         <div class="image-input image-input-outline" data-kt-image-input="true"
-                            style="background-image: url('{{ asset('media/profile-default.png') }}')">
+                            style="background-image: url('{{ asset('media/profile-default.png') }}')" wire:ignore>
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px"
                                 style="background-image: url('{{ $user->photo ? asset('storage/' . $user->photo) : asset('media/profile-default.png') }}')">
