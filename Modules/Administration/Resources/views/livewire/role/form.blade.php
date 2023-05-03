@@ -15,14 +15,15 @@
                     ]) !!}
                     <label for="name">Nombre</label>
                 </div>
-
-                <div class="">
+                <span class="py-2">Permisos</span>
+                <div class="row">
                     @foreach ($permissions as $permission )
-                    <label class="custom-control custom-checkbox">
-                        {!! Form::checkbox('permissions[]', $permission->id, null, ['class' => 'custom-control-input', 'id' => 'permission'.$permission->id, 'wire:model.defer' => 'permission.'.$permission->id]) !!}
-                        <span class="custom-control-label">{{$permission->name}}</span>
-                    </label>
-
+                    <div class="form-check form-check-custom form-check-solid col-md-6">
+                        <label class="form-check-label text-dark p-2">
+                            {!! Form::checkbox('permissions[]', $permission->id, null, ['class' => 'form-check-input', 'id' => 'permission'.$permission->id, 'wire:model.defer' => 'permission.'.$permission->id]) !!}
+                            {{$permission->name}}
+                        </label>
+                    </div>
                     @endforeach
                 </div>
 

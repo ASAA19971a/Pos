@@ -15,11 +15,12 @@
                         ]) !!}
                         <label for="search">Buscar</label>
                     </div>
-                    {{-- <h3 class="card-title">Responsive DataTable</h3> --}}
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                        data-bs-target="#modalForm">
-                        Nuevo
-                    </button>
+                    <div class="">
+                        <button type="button" class="btn btn-outline btn-outline-primary btn-active-primary" data-bs-toggle="modal"
+                            data-bs-target="#modalForm">
+                            Nuevo
+                        </button>
+                    </div>
 
                 </div>
 
@@ -39,11 +40,11 @@
                                         <td>{{ $permission->id }}</td>
                                         <td>{{ $permission->name }}</td>
                                         <td>
-                                            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                            <button type="button" class="btn btn-active-icon-primary btn-text-primary" data-bs-toggle="modal"
                                                 data-bs-target="#modalForm" wire:click="edit({{ $permission->id }})">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                            <button type="button" class="btn btn-active-icon-danger btn-text-danger" data-bs-toggle="modal"
                                                 data-bs-target="#modalForm" wire:click="delete({{ $permission->id }})">
                                                 <i class="fa fa-trash"></i>
                                             </button>

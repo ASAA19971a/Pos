@@ -15,10 +15,12 @@
                         <label for="search">Buscar</label>
                     </div>
                     @can('crear roles')
-                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    <div class="">
+                        <button type="button" class="btn btn-outline btn-outline-primary btn-active-primary" data-bs-toggle="modal"
                             data-bs-target="#modalForm">
                             Nuevo
                         </button>
+                    </div>
                     @endcan
                 </div>
 
@@ -38,19 +40,19 @@
                                         <td>{{ $role->name }}</td>
                                         <td>
                                             @can('ver roles')
-                                            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                            <button type="button" class="btn btn-active-icon-success btn-text-success" data-bs-toggle="modal"
                                                 data-bs-target="#modalView" wire:click="view({{ $role->id }})">
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                             @endcan
                                             @can('editar roles')
-                                            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                            <button type="button" class="btn btn-active-icon-primary btn-text-primary" data-bs-toggle="modal"
                                                 data-bs-target="#modalForm" wire:click="edit({{ $role->id }})">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
                                             @endcan
                                             @can('eliminar roles')
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                            <button type="button" class="btn btn-active-icon-danger btn-text-danger" data-bs-toggle="modal"
                                                 data-bs-target="#modalForm" wire:click="delete({{ $role->id }})">
                                                 <i class="fa fa-trash"></i>
                                             </button>

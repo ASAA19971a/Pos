@@ -15,10 +15,12 @@
                         <label for="search">Buscar</label>
                     </div>
                     @can('crear usuarios')
-                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    <div>
+                        <button type="button" class="btn btn-outline btn-outline-primary btn-active-primary" data-bs-toggle="modal"
                             data-bs-target="#modalForm">
                             Nuevo
                         </button>
+                    </div>
                     @endcan
 
                 </div>
@@ -50,13 +52,13 @@
                                         @can('editar usuarios')
                                             <td>
 
-                                                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                                <button type="button" class="btn btn-active-icon-primary btn-text-primary" data-bs-toggle="modal"
                                                     data-bs-target="#modalForm" wire:click="edit({{ $user->id }})">
                                                     <i class="fa fa-pencil"></i>
                                                 </button>
 
                                                 @can('eliminar usuarios')
-                                                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                                    <button type="button" class="btn btn-active-icon-danger btn-text-danger" data-bs-toggle="modal"
                                                         data-bs-target="#modalForm" wire:click="delete({{ $user->id }})">
                                                         <i class="fa fa-trash"></i>
                                                     </button>

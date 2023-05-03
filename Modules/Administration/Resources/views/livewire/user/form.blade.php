@@ -35,15 +35,15 @@
                     <label for="password">Contraseña</label>
                 </div>
                 @can('crear roles')
-                <div class="">
-                    Roles <br>
+                <span class="py-2">Roles</span>
+                <div class="row">
                     @error('role')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                     @foreach($roles as $role)
-						<div>
-							<label for="role{{$role->id}}">
-								{!! Form::checkbox('roles[]', $role->id, null, ['class' => 'mr-1', 'id' => 'role'.$role->id, 'wire:model.defer' => 'role.'.$role->id]) !!}
+						<div class="form-check form-check-custom form-check-solid col-md-6">
+							<label for="role{{$role->id}}" class="form-check-label text-dark p-2">
+								{!! Form::checkbox('roles[]', $role->id, null, ['class' => 'form-check-input', 'id' => 'role'.$role->id, 'wire:model.defer' => 'role.'.$role->id]) !!}
 								{{ $role->name }}
 							</label>
 						</div>
